@@ -14,14 +14,19 @@ const data = [
   {title : 'Title - 2' , description : 'Desc - 2' , img : goku2},
   {title : 'Title - 3' , description : 'Desc - 3' , img : goku3},
   {title : 'Title - 4' , description : 'Desc - 4' , img : goku4}
-]
+];
+
+const titlePrint =(message)=>{
+    //console.log(`this from App.jsx : ${message}`);
+    alert(`this from App.jsx : ${message}`);
+}
         return(
           <div>
               {
                 data.map((item,index)=>{
                   return(
-                    //<card_Detail/>
-                      <Card_Detail key={index} title={item.title}  description={item.description}  img={item.img} />
+                    //sending data by component  ,  don't use () in function calling ! 
+                      <Card_Detail key={index} title={item.title}  description={item.description}  img={item.img} clickMe={titlePrint} />
                   )
                 })
               }
