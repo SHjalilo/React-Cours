@@ -26,11 +26,19 @@ const titlePrint =(message)=>{
                 data.map((item,index)=>{
                   return(
                     //sending data by component  ,  don't use () in function calling ! 
-                      <Card_Detail key={index} title={item.title}  description={item.description}  img={item.img} clickMe={titlePrint} />
+                      <Card_Detail key={index} title={item.title}  description={item.description}  img={item.img} clickMe={titlePrint} >
+                          { 
+                            // you can write anythings here like a children // 
+                            // <h1>Hello Anime </h1>
+                          }
+                          
+                      </Card_Detail>
                   )
                 })
               }
+             
           </div>
+         
         );
 }
 
