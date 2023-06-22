@@ -1,4 +1,5 @@
 import Card_Detail from "./component/cardDetails";
+import NotFound from "./component/NotFound";
 import  goku1  from "./image/goku1.jpg";
 import  goku2  from "./image/goku2.jpg";
 import  goku3  from "./image/goku3.jpg";
@@ -23,7 +24,7 @@ const titlePrint =(message)=>{
         return(
           <div>
               {
-                data.map((item,index)=>{
+                data.length ? (data.map((item,index)=>{
                   return(
                     //sending data by component  ,  don't use () in function calling ! 
                       <Card_Detail key={index} title={item.title}  description={item.description}  img={item.img} clickMe={titlePrint} >
@@ -34,7 +35,8 @@ const titlePrint =(message)=>{
                           
                       </Card_Detail>
                   )
-                })
+                })) : (<NotFound message="No Data Founds !"  color="danger" />)
+                
               }
              
           </div>
