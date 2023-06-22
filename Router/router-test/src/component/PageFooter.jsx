@@ -1,3 +1,5 @@
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 
@@ -7,7 +9,9 @@ const Footer = ()=>{
 
     return(
         <div>
-            All Rights 2023 
+            <p>All Rights 2023</p>
+            <Link to="/" > <Button>Go Home </Button> </Link>
+            
 
         </div>
     );
