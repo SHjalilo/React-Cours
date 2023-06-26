@@ -5,7 +5,7 @@ import { colorContext } from "./component/use_Contexts";
 const App = () =>{
 // 5 - use context
 const {data, changeData} = useContext(colorContext)
-changeData('green');
+//changeData('green');
   return (
     
     <div>
